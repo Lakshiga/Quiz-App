@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Quiz</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -21,7 +21,13 @@
                 <button class="tab-button" onclick="showTab('css')">CSS</button>
                 <button class="tab-button" onclick="showTab('javascript')">JavaScript</button>
             </div>
-            <div id="timer" style="justify-content: left; justify-items: left;" class="timer">00:20</div>
+            <div id="timer" style="justify-content: right; justify-items: right;">
+                <svg>
+                    <circle cx="50" cy="50" r="45"></circle>
+                    <circle cx="50" cy="50" r="45" id="timeCircle"></circle>
+                </svg>
+                <div id="timeRemaining">20</div>
+            </div>
             <div class="quiz-question">
                 <h1 id="endtext">Quiz Result</h1>
 
@@ -36,16 +42,16 @@
         </div>
 
         <div class="quiz-navigation" id="quiznavigation1">
-            <button class="nav-button" id="1" onclick="navigateQuestion(0)"> Question 1</button>
-            <button class="nav-button" id="2" onclick="navigateQuestion(1)"> Question 2</button>
-            <button class="nav-button" id="3" onclick="navigateQuestion(2)"> Question 3</button>
-            <button class="nav-button" id="4" onclick="navigateQuestion(3)"> Question 4</button>
-            <button class="nav-button" id="5" onclick="navigateQuestion(4)"> Question 5</button>
-            <button class="nav-button" id="6" onclick="navigateQuestion(5)"> Question 6</button>
-            <button class="nav-button" id="7" onclick="navigateQuestion(6)"> Question 7</button>
-            <button class="nav-button" Id="8" onclick="navigateQuestion(7)"> Question 8</button>
-            <button class="nav-button" id="9" onclick="navigateQuestion(8)"> Question 9</button>
-            <button class="nav-button" id="10" onclick="navigateQuestion(9)"> Question 10</button>
+            <button class="nav-button" id="1" onclick="navigateQuestion(0)">Question 1</button>
+            <button class="nav-button" id="2" onclick="navigateQuestion(1)">Question 2</button>
+            <button class="nav-button" id="3" onclick="navigateQuestion(2)">Question 3</button>
+            <button class="nav-button" id="4" onclick="navigateQuestion(3)">Question 4</button>
+            <button class="nav-button" id="5" onclick="navigateQuestion(4)">Question 5</button>
+            <button class="nav-button" id="6" onclick="navigateQuestion(5)">Question 6</button>
+            <button class="nav-button" id="7" onclick="navigateQuestion(6)">Question 7</button>
+            <button class="nav-button" Id="8" onclick="navigateQuestion(7)">Question 8</button>
+            <button class="nav-button" id="9" onclick="navigateQuestion(8)">Question 9</button>
+            <button class="nav-button" id="10" onclick="navigateQuestion(9)">Question 10</button>
         </div>
         <button id="restart-button" class="Restartbtn" onclick="restartQuiz()">Restart Quiz</button>
     </div>
